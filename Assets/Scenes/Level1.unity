@@ -2224,7 +2224,13 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a19270ec0faf8a64e8c5007c0a2b32e4, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 743750321}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a19270ec0faf8a64e8c5007c0a2b32e4, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 743750318}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a19270ec0faf8a64e8c5007c0a2b32e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 743750319}
   m_SourcePrefab: {fileID: 100100000, guid: a19270ec0faf8a64e8c5007c0a2b32e4, type: 3}
 --- !u!1 &743750317 stripped
 GameObject:
@@ -2252,7 +2258,43 @@ NavMeshAgent:
   m_Height: 0.75
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
+--- !u!114 &743750319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743750317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e45b63c75d95f5846bfb1d493f1a1e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPoint: {fileID: 81300108}
+  isWalkingBool: isWalking
+--- !u!95 &743750321
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743750317}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 244e672055d6c5a49bca96b4615f7641, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &749603573
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4190,6 +4232,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 641357817}
     m_Modifications:
+    - target: {fileID: 189320121530946348, guid: da1ca869c7a320441b7d7e0196fe69ba, type: 3}
+      propertyPath: m_Name
+      value: Start-Tile
+      objectReference: {fileID: 0}
     - target: {fileID: 714745270383921558, guid: da1ca869c7a320441b7d7e0196fe69ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -4229,10 +4275,6 @@ PrefabInstance:
     - target: {fileID: 714745270383921558, guid: da1ca869c7a320441b7d7e0196fe69ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 189320121530946348, guid: da1ca869c7a320441b7d7e0196fe69ba, type: 3}
-      propertyPath: m_Name
-      value: Tile-End-Round
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6536,6 +6578,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 641357817}
     m_Modifications:
+    - target: {fileID: 5062814475634022137, guid: 9895e0bcb785e044281a3ec275d98393, type: 3}
+      propertyPath: m_Name
+      value: Tile-Corner-Square
+      objectReference: {fileID: 0}
     - target: {fileID: 5551084965882448963, guid: 9895e0bcb785e044281a3ec275d98393, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
@@ -6575,10 +6621,6 @@ PrefabInstance:
     - target: {fileID: 5551084965882448963, guid: 9895e0bcb785e044281a3ec275d98393, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5062814475634022137, guid: 9895e0bcb785e044281a3ec275d98393, type: 3}
-      propertyPath: m_Name
-      value: Tile-Corner-Square
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6843,7 +6885,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 189320121530946348, guid: da1ca869c7a320441b7d7e0196fe69ba, type: 3}
       propertyPath: m_Name
-      value: tile-end-round (1)
+      value: End-Tile
       objectReference: {fileID: 0}
     - target: {fileID: 714745270383921558, guid: da1ca869c7a320441b7d7e0196fe69ba, type: 3}
       propertyPath: m_LocalPosition.x

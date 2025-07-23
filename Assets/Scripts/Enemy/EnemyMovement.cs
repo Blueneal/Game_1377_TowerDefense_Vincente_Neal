@@ -1,16 +1,33 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyMovement : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private NavMeshAgent agent;
+    private Animator animator;
+    [SerializeField] private Transform endPoint;
+    [SerializeField] private string isWalkingBool;
+
+    private void Awake()
     {
-        
+        agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        agent.SetDestination(endPoint.position);
+        animator.SetBool(isWalkingBool, true);
+    }
+
     void Update()
     {
-        
+        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+        {
+            if (!agent.hasPath || agent.pathStatus == NavMeshPathStatus.PathComplete)
+            {
+                animator.SetBool(isWalkingBool, false);
+            }
+        }
     }
 }
