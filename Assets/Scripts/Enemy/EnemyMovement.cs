@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -7,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
     private Animator animator;
     [SerializeField] private Transform endPoint;
     [SerializeField] private string isWalkingBool;
+    [SerializeField] private int damage;
 
     private void Awake()
     {
@@ -26,8 +28,15 @@ public class EnemyMovement : MonoBehaviour
         {
             if (!agent.hasPath || agent.pathStatus == NavMeshPathStatus.PathComplete)
             {
-                animator.SetBool(isWalkingBool, false);
+                DealDamage();
             }
         }
+    }
+
+    private void DealDamage()
+    {
+        animator.SetBool(isWalkingBool, false);
+        GameManager.Instance.playerHealth.TakeDamage(damage);
+        Destroy(gameObject);
     }
 }
