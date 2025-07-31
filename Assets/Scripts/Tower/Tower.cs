@@ -2,10 +2,10 @@ using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tower : MonoBehaviour
+public abstract class Tower : MonoBehaviour
 {
     public float fireCoolDown = 1.0f;
-    public GameObject projectilePrefab;
+
     protected float currentFireCoolDown = 0.0f;
     protected List<Enemy> enemiesInRange = new List<Enemy>();
 
@@ -20,29 +20,10 @@ public class Tower : MonoBehaviour
         }
     }
 
-    private void FireAt(Enemy Target)
-    {
-        if (projectilePrefab != null)
-        {
-            GameObject projectileInstance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-        }
-    }
+    protected abstract void FireAt(Enemy Target);
 
-    private Enemy GetClosestEnemy()
-    {
-        Enemy closestEnemy = null;
-        float closestDistance = float.MaxValue;
-        foreach (Enemy enemy in enemiesInRange)
-        {
-            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if (distanceToEnemy < closestDistance)
-            {
-                closestDistance = distanceToEnemy;
-                closestEnemy = enemy;
-            }
-        }
-        return closestEnemy;
-    }
+    protected abstract Enemy GetClosestEnemy();
+    
 
     private void OnTriggerEnter(Collider other)
     {
