@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CannonballProjectile : Projectile
 {
+    private float knockBackForce = 5f;
+    
     protected override void OnTriggerEnter(Collider other)
     {
         if (other.transform == target)
@@ -9,7 +11,11 @@ public class CannonballProjectile : Projectile
             Enemy enemy = other.GetComponent<Enemy>();
             if (enemy != null)
             {
-                Destroy(enemy.gameObject);
+                Vector3 knockback = (transform.position - enemy.transform.position).normalized;
+                Rigidbody rb = enemy.GetComponent<Rigidbody>();
+                rb.AddForce(knockback * knockBackForce, ForceMode.Impulse);
+                enemy.TakeDamage(damage);
+                Destroy(gameObject);
             }
         }
     }

@@ -80,9 +80,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d28fbfb0429844d8254f838aa321b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
-  speed: 28
+  speed: 15
   lifetime: 3
+  damage: 10
+  target: {fileID: 0}
 --- !u!65 &57416396498516253
 BoxCollider:
   m_ObjectHideFlags: 0

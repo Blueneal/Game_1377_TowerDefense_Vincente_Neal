@@ -136,6 +136,7 @@ MonoBehaviour:
   endPoint: {fileID: 0}
   isWalkingBool: isWalking
   damage: 5
+  health: 20
 --- !u!136 &3235546976951956211
 CapsuleCollider:
   m_ObjectHideFlags: 0

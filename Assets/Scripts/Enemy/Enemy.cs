@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Transform endPoint;
     [SerializeField] private string isWalkingBool;
     [SerializeField] private int damage;
+    [SerializeField] private int health = 20;
 
     private void Awake()
     {
@@ -43,5 +44,18 @@ public class Enemy : MonoBehaviour
         animator.SetBool(isWalkingBool, false);
         GameManager.Instance.playerHealth.TakeDamage(damage);
         Destroy(gameObject);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (health > 0)
+        {
+            health -= damage;
+            Debug.Log("Enemy Health: " + health);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
