@@ -9,12 +9,14 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Transform endPoint;
     [SerializeField] private string isWalkingBool;
     [SerializeField] private int damage;
-    [SerializeField] private int health = 20;
+    public int maxHealth = 20;
+    public int currentHealth;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        currentHealth = maxHealth;
     }
 
     void Start()
@@ -48,10 +50,10 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (health > 0)
+        if (currentHealth > 0)
         {
-            health -= damage;
-            Debug.Log("Enemy Health: " + health);
+            currentHealth -= damage;
+            Debug.Log("Enemy Health: " + currentHealth);
         }
         else
         {

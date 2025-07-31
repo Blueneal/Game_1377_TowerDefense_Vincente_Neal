@@ -22,13 +22,13 @@ public class CannonTower : Tower
             }
         }
         Enemy closestEnemy = null;
-        float closestDistance = float.MaxValue;
+        float lowHealth = float.MaxValue;
         foreach (Enemy enemy in enemiesInRange)
         {
-            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if (distanceToEnemy < closestDistance)
+            Enemy enemyHealth = enemy.GetComponent<Enemy>();
+            if (enemyHealth != null && enemyHealth.currentHealth < lowHealth)
             {
-                closestDistance = distanceToEnemy;
+                lowHealth = enemyHealth.currentHealth;
                 closestEnemy = enemy;
             }
         }

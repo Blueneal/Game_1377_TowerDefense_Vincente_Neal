@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CannonballProjectile : Projectile
 {
-    private float knockBackForce = 5f;
+    [SerializeField] private float knockBackForce = 5f;
     
     protected override void OnTriggerEnter(Collider other)
     {
