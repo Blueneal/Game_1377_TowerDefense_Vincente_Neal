@@ -82,9 +82,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   lifetime: 3
-  damage: 1
+  damage: 5
   target: {fileID: 0}
-  knockBackForce: 10
+  knockBackForce: 50
 --- !u!65 &57416396498516253
 BoxCollider:
   m_ObjectHideFlags: 0
