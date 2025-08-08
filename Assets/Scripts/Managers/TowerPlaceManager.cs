@@ -22,10 +22,11 @@ public class TowerPlaceManager : MonoBehaviour
         currentMoney = startingMoney;
         moneyText.text = "Money: $" + currentMoney;
     }
-
     
     void Update()
     {
+        moneyText.text = "Money: $" + currentMoney;
+
         if (isPlacingTower)
         {
             Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
@@ -40,7 +41,6 @@ public class TowerPlaceManager : MonoBehaviour
                 towerPreview.SetActive(false);
             }
         }
-        moneyText.text = "Money: $" + currentMoney;
 
         if (currentMoney < 30)
         {
