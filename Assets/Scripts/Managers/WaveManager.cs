@@ -63,5 +63,4 @@ public class WaveManager : MonoBehaviour
         Enemy enemy = enemyInstance.GetComponent<Enemy>();
         enemy.Initialize(endPoint);
     }
-
 }
