@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Tower : MonoBehaviour
 {
     public float fireCoolDown = 1.0f;
+    public int value;
 
     protected float currentFireCoolDown = 0.0f;
     protected List<Enemy> enemiesInRange = new List<Enemy>();

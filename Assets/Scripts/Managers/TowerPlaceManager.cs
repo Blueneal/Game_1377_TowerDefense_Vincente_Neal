@@ -66,6 +66,7 @@ public class TowerPlaceManager : MonoBehaviour
                 Destroy(towerPreview);
             }
             towerPreview = Instantiate(currentTowerToSpawn);
+            currentMoney -= towerPrefab.GetComponent<Tower>().value;
         }
     }
 
