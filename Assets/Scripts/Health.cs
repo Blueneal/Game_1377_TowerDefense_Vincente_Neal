@@ -1,16 +1,17 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI healthText;
+    [SerializeField] private Slider healthSlider;
     [SerializeField] private int maxHealth = 20;
     private int currentHealth;
 
     private void Awake()
     {
         currentHealth = maxHealth;
-        healthText.text = "Health: " + currentHealth;
+        healthSlider.value = currentHealth;
     }
 
     public bool IsDead()
@@ -24,6 +25,6 @@ public class Health : MonoBehaviour
         {
             currentHealth = Mathf.Max(currentHealth - damageAmount, 0);
         }
-        healthText.text = "Health: " + currentHealth;
+        healthSlider.value = currentHealth;
     }
 }

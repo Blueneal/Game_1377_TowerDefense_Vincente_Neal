@@ -12,6 +12,7 @@ public class TowerPlaceManager : MonoBehaviour
     private GameObject currentTowerToSpawn;
     private GameObject towerPreview;
     private Vector3 towerPlacementPos;
+    private GameManager gameManager = GameManager.Instance;
 
     void Start()
     {

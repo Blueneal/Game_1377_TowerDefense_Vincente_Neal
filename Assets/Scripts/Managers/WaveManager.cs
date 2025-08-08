@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 [System.Serializable]
 public struct SpawnData
@@ -20,24 +21,9 @@ public struct WaveData
 
 public class WaveManager : MonoBehaviour
 {
-    public List<WaveData> LevelWaveData;
-    //[SerializeField] private GameObject enemyPrefab;
-    //[SerializeField] private Transform spawnPoint;
-    //[SerializeField] private Transform endPoint;
-    //[SerializeField] private float timeBetweenSpawns = 1f;
-    //[SerializeField] private float timeBetweenWaves = 5f;
-    //[SerializeField] private int enemyCount = 5;
-    //[SerializeField] private int waveCount = 2;
-    
-    void Start()
-    {
-        StartLevel();
-    }
+    private GameManager gameManager = GameManager.Instance;
 
-    void Update()
-    {
-        
-    }
+    public List<WaveData> LevelWaveData;
 
     public void StartLevel()
     {
@@ -62,4 +48,5 @@ public class WaveManager : MonoBehaviour
         Enemy enemy = enemyInstance.GetComponent<Enemy>();
         enemy.Initialize(endPoint);
     }
+
 }

@@ -1,10 +1,18 @@
+using UnityEditor.Rendering.Universal.ShaderGUI;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    public bool gameStart;
 
     [SerializeField] public Health playerHealth;
+    [SerializeField] private WaveManager waveManager;
+    [SerializeField] private GameObject waveButton;
+    [SerializeField] private Button ballistaButton;
+    [SerializeField] private Button cannonButton;
+    [SerializeField] private Button crystalButton;
 
     private void Awake()
     {
@@ -17,16 +25,17 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        gameStart = false;
     }
 
-    void Start()
+    public void StartGame()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        waveManager.StartLevel();
+        waveButton.SetActive(false);
+        gameStart = true;
+        ballistaButton.interactable = false;
+        cannonButton.interactable = false;
+        crystalButton.interactable = false;
     }
 }

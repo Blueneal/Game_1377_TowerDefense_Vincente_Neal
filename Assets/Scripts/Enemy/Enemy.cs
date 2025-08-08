@@ -39,6 +39,11 @@ public class Enemy : MonoBehaviour
                 DealDamage();
             }
         }
+
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void DealDamage()
@@ -50,14 +55,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (currentHealth > 0)
-        {
             currentHealth -= damage;
             Debug.Log("Enemy Health: " + currentHealth);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
 }

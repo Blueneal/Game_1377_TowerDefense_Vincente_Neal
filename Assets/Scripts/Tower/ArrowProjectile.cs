@@ -10,7 +10,8 @@ public class ArrowProjectile : Projectile
             Enemy enemy = other.GetComponent<Enemy>();
             if (enemy != null)
             {
-                Destroy(enemy.gameObject);
+                enemy.TakeDamage(damage);
+                Destroy(gameObject);
             }
         }
     }
