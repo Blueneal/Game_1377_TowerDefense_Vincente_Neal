@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class TowerPlaceManager : MonoBehaviour
 {
     public int startingMoney;
+    public int currentMoney;
     public Camera mainCamera;
     public LayerMask tileLayer;
     public InputAction placeTowerAction;
@@ -15,7 +16,6 @@ public class TowerPlaceManager : MonoBehaviour
     private GameObject currentTowerToSpawn;
     private GameObject towerPreview;
     private Vector3 towerPlacementPos;
-    private int currentMoney;
 
     void Start()
     {
@@ -41,6 +41,20 @@ public class TowerPlaceManager : MonoBehaviour
             }
         }
         moneyText.text = "Money: $" + currentMoney;
+
+        if (currentMoney < 30)
+        {
+            GameManager gameManager = GameManager.Instance;
+            gameManager.crystalButton.interactable = false;
+            if (currentMoney < 20)
+            {
+                gameManager.cannonButton.interactable = false;
+                if (currentMoney < 10)
+                {
+                    gameManager.ballistaButton.interactable = false;
+                }
+            }
+        }
     }
 
     private void OnEnable()

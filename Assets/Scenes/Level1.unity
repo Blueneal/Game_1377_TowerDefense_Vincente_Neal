@@ -453,13 +453,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: 2
   playerHealth: {fileID: 74037986}
-  waveManager: {fileID: 74037988}
-  waveButton: {fileID: 694121247}
-  gameOverUI: {fileID: 493243516}
-  levelCompleteUI: {fileID: 1102379804}
   ballistaButton: {fileID: 1683422400}
   cannonButton: {fileID: 1265055992}
   crystalButton: {fileID: 1076848031}
+  waveManager: {fileID: 74037988}
+  towerManager: {fileID: 74037989}
+  waveButton: {fileID: 694121247}
+  gameOverUI: {fileID: 493243516}
+  levelCompleteUI: {fileID: 1102379804}
 --- !u!114 &74037986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,7 +509,7 @@ MonoBehaviour:
   LevelWaveData:
   - TimeBeforeWave: 1
     enemyData:
-    - EnemyToSpawn: {fileID: 2639826520325784389, guid: 0740c119f60947b459f3a8285d03439b, type: 3}
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
       timeBeforeSpawn: 1
       SpawnPoint: {fileID: 1376691146}
       EndPoint: {fileID: 81300108}
@@ -597,6 +598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingMoney: 30
+  currentMoney: 0
   mainCamera: {fileID: 330585545}
   tileLayer:
     serializedVersion: 2

@@ -8,15 +8,16 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public int nextScene;
+    public Health playerHealth;
+    public Button ballistaButton;
+    public Button cannonButton;
+    public Button crystalButton;
 
-    [SerializeField] public Health playerHealth;
     [SerializeField] private WaveManager waveManager;
+    [SerializeField] private TowerPlaceManager towerManager;
     [SerializeField] private GameObject waveButton;
     [SerializeField] private GameObject gameOverUI;
     [SerializeField] private GameObject levelCompleteUI;
-    [SerializeField] private Button ballistaButton;
-    [SerializeField] private Button cannonButton;
-    [SerializeField] private Button crystalButton;
 
     private void Awake()
     {
@@ -43,9 +44,7 @@ public class GameManager : MonoBehaviour
     public void EndWave()
     {
         waveButton.SetActive(true);
-        ballistaButton.interactable = true;
-        cannonButton.interactable = true;
-        crystalButton.interactable = true;
+        MoneyCheck();
     }
 
     public void GameOver()
@@ -79,5 +78,21 @@ public class GameManager : MonoBehaviour
     public void CloseGame()
     {
         Application.Quit();
+    }
+
+    public void MoneyCheck()
+    {
+        if (towerManager.currentMoney >= 10)
+        {
+            ballistaButton.interactable = true;
+            if (towerManager.currentMoney >= 20 && nextScene == 3)
+            {
+                cannonButton.interactable = true;
+                if (towerManager.currentMoney >= 30 && nextScene == 4)
+                {
+                    crystalButton.interactable = true;
+                }
+            }
+        }
     }
 }
