@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -38,19 +39,19 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
-        {
-            if (!agent.hasPath || agent.pathStatus == NavMeshPathStatus.PathComplete)
-            {
-                DealDamage();
-            }
-        }
-
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
             TowerPlaceManager towerManager = FindAnyObjectByType<TowerPlaceManager>();
             towerManager.AddMoney(value);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("End"))
+        {
+            DealDamage();
         }
     }
 
