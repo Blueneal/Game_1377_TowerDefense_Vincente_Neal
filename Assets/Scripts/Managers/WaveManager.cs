@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System;
 
 [System.Serializable]
 public struct SpawnData
@@ -21,7 +22,8 @@ public struct WaveData
 
 public class WaveManager : MonoBehaviour
 {
-    private GameManager gameManager = GameManager.Instance;
+    [SerializeField] private GameManager gameManager;
+    private int waveNumber = 0;
 
     public List<WaveData> LevelWaveData;
 
@@ -32,14 +34,13 @@ public class WaveManager : MonoBehaviour
 
     IEnumerator StartWave()
     {
-        foreach (WaveData currentWave in LevelWaveData)
+        foreach (SpawnData currentEnemyToSpawn in LevelWaveData[waveNumber].enemyData)
         {
-            foreach (SpawnData currentEnemyToSpawn in currentWave.enemyData)
-            {
-                yield return new WaitForSeconds(currentEnemyToSpawn.timeBeforeSpawn);
-                SpawnEnemy(currentEnemyToSpawn.EnemyToSpawn, currentEnemyToSpawn.SpawnPoint, currentEnemyToSpawn.EndPoint);
-            }
+            yield return new WaitForSeconds(currentEnemyToSpawn.timeBeforeSpawn);
+            SpawnEnemy(currentEnemyToSpawn.EnemyToSpawn, currentEnemyToSpawn.SpawnPoint, currentEnemyToSpawn.EndPoint);
         }
+        waveNumber++;
+        gameManager.EndWave();
     }
 
     public void SpawnEnemy(GameObject enemyPrefab, Transform spawnPoint, Transform endPoint)

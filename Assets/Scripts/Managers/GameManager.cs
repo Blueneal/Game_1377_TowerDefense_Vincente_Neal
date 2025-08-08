@@ -1,3 +1,4 @@
+using System;
 using UnityEditor.Rendering.Universal.ShaderGUI;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,7 +6,6 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public bool gameStart;
 
     [SerializeField] public Health playerHealth;
     [SerializeField] private WaveManager waveManager;
@@ -25,17 +25,22 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
-        gameStart = false;
     }
 
     public void StartGame()
     {
         waveManager.StartLevel();
         waveButton.SetActive(false);
-        gameStart = true;
         ballistaButton.interactable = false;
         cannonButton.interactable = false;
         crystalButton.interactable = false;
+    }
+
+    public void EndWave()
+    {
+        waveButton.SetActive(true);
+        ballistaButton.interactable = true;
+        cannonButton.interactable = true;
+        crystalButton.interactable = true;
     }
 }

@@ -513,7 +513,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13e738085bdeec48bae197208eb2471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStart: 0
   playerHealth: {fileID: 74037986}
   waveManager: {fileID: 74037988}
   waveButton: {fileID: 694121247}
@@ -561,6 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7fb4e49d24690341b4b1e805816a30f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 74037985}
   LevelWaveData:
   - TimeBeforeWave: 1
     enemyData:
@@ -573,6 +573,20 @@ MonoBehaviour:
       SpawnPoint: {fileID: 1376691146}
       EndPoint: {fileID: 81300108}
     - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 1376691146}
+      EndPoint: {fileID: 81300108}
+  - TimeBeforeWave: 1
+    enemyData:
+    - EnemyToSpawn: {fileID: 8859297784093310116, guid: d0fc652621e3a6b4b8a6ad4a40743e0d, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 1376691146}
+      EndPoint: {fileID: 81300108}
+    - EnemyToSpawn: {fileID: 8859297784093310116, guid: d0fc652621e3a6b4b8a6ad4a40743e0d, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 1376691146}
+      EndPoint: {fileID: 81300108}
+    - EnemyToSpawn: {fileID: 8859297784093310116, guid: d0fc652621e3a6b4b8a6ad4a40743e0d, type: 3}
       timeBeforeSpawn: 1
       SpawnPoint: {fileID: 1376691146}
       EndPoint: {fileID: 81300108}
