@@ -64,13 +64,13 @@ PrefabInstance:
       addedObject: {fileID: 4992187510434698519}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a19270ec0faf8a64e8c5007c0a2b32e4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5200310173265710401}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a19270ec0faf8a64e8c5007c0a2b32e4, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3235546976951956211}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a19270ec0faf8a64e8c5007c0a2b32e4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2792721876881034268}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a19270ec0faf8a64e8c5007c0a2b32e4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5200310173265710401}
   m_SourcePrefab: {fileID: 100100000, guid: a19270ec0faf8a64e8c5007c0a2b32e4, type: 3}
 --- !u!1 &8658937250692046400 stripped
 GameObject:
@@ -121,22 +121,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 1
---- !u!114 &5200310173265710401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8658937250692046400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c5f2bef73b3b794e9c55dbc0bf8574a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endPoint: {fileID: 0}
-  isWalkingBool: isWalking
-  damage: 5
-  health: 20
 --- !u!136 &3235546976951956211
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -187,3 +171,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &5200310173265710401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8658937250692046400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c5f2bef73b3b794e9c55dbc0bf8574a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endPoint: {fileID: 0}
+  isWalkingBool: isWalking
+  damage: 5
+  maxHealth: 20
+  currentHealth: 0
