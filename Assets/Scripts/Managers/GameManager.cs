@@ -1,6 +1,7 @@
 using System;
 using UnityEditor.Rendering.Universal.ShaderGUI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public Health playerHealth;
     [SerializeField] private WaveManager waveManager;
     [SerializeField] private GameObject waveButton;
+    [SerializeField] private GameObject gameOverUI;
     [SerializeField] private Button ballistaButton;
     [SerializeField] private Button cannonButton;
     [SerializeField] private Button crystalButton;
@@ -42,5 +44,26 @@ public class GameManager : MonoBehaviour
         ballistaButton.interactable = true;
         cannonButton.interactable = true;
         crystalButton.interactable = true;
+    }
+
+    public void GameOver()
+    {
+        gameOverUI.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void MainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
+    }
+
+    public void CloseGame()
+    {
+        Application.Quit();
     }
 }

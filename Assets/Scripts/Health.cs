@@ -4,14 +4,23 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private Slider healthSlider;
     [SerializeField] private int maxHealth = 20;
-    private int currentHealth;
+    public int currentHealth;
 
     private void Awake()
     {
         currentHealth = maxHealth;
         healthSlider.value = currentHealth;
+    }
+
+    public void Update()
+    {
+        if (currentHealth <= 0)
+        {
+            gameManager.GameOver();
+        }
     }
 
     public bool IsDead()

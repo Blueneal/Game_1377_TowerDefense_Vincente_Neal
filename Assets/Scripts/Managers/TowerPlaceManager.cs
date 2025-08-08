@@ -1,22 +1,26 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class TowerPlaceManager : MonoBehaviour
 {
+    public int startingMoney;
     public Camera mainCamera;
     public LayerMask tileLayer;
     public InputAction placeTowerAction;
 
     [SerializeField] private bool isPlacingTower = false;
     [SerializeField] private float placementHeightOffset = 0.2f;
+    [SerializeField] private TextMeshProUGUI moneyText;
     private GameObject currentTowerToSpawn;
     private GameObject towerPreview;
     private Vector3 towerPlacementPos;
-    private GameManager gameManager = GameManager.Instance;
+    private int currentMoney;
 
     void Start()
     {
-        
+        currentMoney = startingMoney;
+        moneyText.text = "Money: $" + currentMoney;
     }
 
     
@@ -36,6 +40,7 @@ public class TowerPlaceManager : MonoBehaviour
                 towerPreview.SetActive(false);
             }
         }
+        moneyText.text = "Money: $" + currentMoney;
     }
 
     private void OnEnable()

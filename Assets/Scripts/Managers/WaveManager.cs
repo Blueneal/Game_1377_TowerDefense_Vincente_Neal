@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
+using TMPro;
 
 [System.Serializable]
 public struct SpawnData
@@ -22,10 +23,22 @@ public struct WaveData
 
 public class WaveManager : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI waveText;
     [SerializeField] private GameManager gameManager;
     private int waveNumber = 0;
+    private int currentWave = 1;
 
     public List<WaveData> LevelWaveData;
+
+    private void Start()
+    {
+        waveText.text = "Wave: " + currentWave + "/" + LevelWaveData.Count;
+    }
+
+    private void Update()
+    {
+        waveText.text = "Wave: " + currentWave + "/" + LevelWaveData.Count;
+    }
 
     public void StartLevel()
     {
@@ -40,6 +53,7 @@ public class WaveManager : MonoBehaviour
             SpawnEnemy(currentEnemyToSpawn.EnemyToSpawn, currentEnemyToSpawn.SpawnPoint, currentEnemyToSpawn.EndPoint);
         }
         waveNumber++;
+        currentWave++;
         gameManager.EndWave();
     }
 
