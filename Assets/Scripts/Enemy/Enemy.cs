@@ -22,6 +22,11 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        if (gameObject.CompareTag("Horse"))
+        {
+            animator = GetComponentInChildren<Animator>();
+            animator.SetBool(isWalkingBool, true);
+        }
         animator.SetBool(isWalkingBool, true);
     }
 

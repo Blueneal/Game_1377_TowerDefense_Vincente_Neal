@@ -508,7 +508,7 @@ MonoBehaviour:
   LevelWaveData:
   - TimeBeforeWave: 1
     enemyData:
-    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+    - EnemyToSpawn: {fileID: 2639826520325784389, guid: 0740c119f60947b459f3a8285d03439b, type: 3}
       timeBeforeSpawn: 1
       SpawnPoint: {fileID: 1376691146}
       EndPoint: {fileID: 81300108}
