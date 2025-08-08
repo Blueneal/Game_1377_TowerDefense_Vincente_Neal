@@ -126,7 +126,7 @@ MonoBehaviour:
   damage: 3
   maxHealth: 15
   currentHealth: 0
-  value: 15
+  value: 10
 --- !u!1001 &1826269442698489999
 PrefabInstance:
   m_ObjectHideFlags: 0

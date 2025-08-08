@@ -183,10 +183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c5f2bef73b3b794e9c55dbc0bf8574a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerManager: {fileID: 0}
   endPoint: {fileID: 0}
   isWalkingBool: isWalking
   damage: 5
   maxHealth: 20
   currentHealth: 0
-  value: 10
+  value: 5
