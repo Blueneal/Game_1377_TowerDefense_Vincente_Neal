@@ -1,0 +1,220 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5498346761518162816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 777402874904297849}
+  - component: {fileID: 149186628199554579}
+  - component: {fileID: 7926589338319774129}
+  - component: {fileID: 923615647513747974}
+  - component: {fileID: 6511470079860534810}
+  - component: {fileID: 6179087092808291029}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &777402874904297849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5498346761518162816}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &149186628199554579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5498346761518162816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee76bb07fa7e0d4087ff3e1386b988b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 7926589338319774129}
+  healthSlider: {fileID: 0}
+  maxHealth: 20
+  currentHealth: 0
+--- !u!114 &7926589338319774129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5498346761518162816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b13e738085bdeec48bae197208eb2471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: 2
+  playerHealth: {fileID: 149186628199554579}
+  ballistaButton: {fileID: 0}
+  cannonButton: {fileID: 0}
+  crystalButton: {fileID: 0}
+  waveManager: {fileID: 923615647513747974}
+  towerManager: {fileID: 6511470079860534810}
+  waveButton: {fileID: 0}
+  gameOverUI: {fileID: 0}
+  levelCompleteUI: {fileID: 0}
+--- !u!114 &923615647513747974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5498346761518162816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fb4e49d24690341b4b1e805816a30f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveText: {fileID: 0}
+  gameManager: {fileID: 7926589338319774129}
+  LevelWaveData:
+  - TimeBeforeWave: 1
+    enemyData:
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+  - TimeBeforeWave: 1
+    enemyData:
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+  - TimeBeforeWave: 1
+    enemyData:
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+      timeBeforeSpawn: 1
+      SpawnPoint: {fileID: 0}
+      EndPoint: {fileID: 0}
+--- !u!114 &6511470079860534810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5498346761518162816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c2de0dd31442e04097364c0cbf3ee8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingMoney: 30
+  currentMoney: 0
+  mainCamera: {fileID: 0}
+  tileLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  placeTowerAction:
+    m_Name: Place Tower
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7929e059-427c-48f5-b845-4bdbe92aa654
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 76c486de-e804-455a-a9ed-fa0e39592117
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Place Tower
+      m_Flags: 0
+    m_Flags: 0
+  isPlacingTower: 0
+  placementHeightOffset: 0.2
+  moneyText: {fileID: 0}
+--- !u!114 &6179087092808291029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5498346761518162816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f569566e405332041a191028784e18e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseUI: {fileID: 0}
