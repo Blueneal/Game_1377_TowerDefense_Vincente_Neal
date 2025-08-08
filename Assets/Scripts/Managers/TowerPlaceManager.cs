@@ -80,4 +80,10 @@ public class TowerPlaceManager : MonoBehaviour
         currentTowerToSpawn = null;
         isPlacingTower = false;
     }
+
+    public void AddMoney(int money)
+    {
+        currentMoney += money;
+    }
+
 }

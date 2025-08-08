@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13e738085bdeec48bae197208eb2471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 0
+  nextScene: 2
   playerHealth: {fileID: 74037986}
   waveManager: {fileID: 74037988}
   waveButton: {fileID: 694121247}

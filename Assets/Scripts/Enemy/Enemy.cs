@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int damage;
     public int maxHealth = 20;
     public int currentHealth;
+    public int value;
 
     private void Awake()
     {
@@ -43,6 +44,8 @@ public class Enemy : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
+            TowerPlaceManager towerManager = FindAnyObjectByType<TowerPlaceManager>();
+            towerManager.AddMoney(value);
         }
     }
 
