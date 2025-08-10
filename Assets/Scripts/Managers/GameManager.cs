@@ -9,11 +9,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public int nextScene;
     public Health playerHealth;
+    public WaveManager waveManager;
     public Button ballistaButton;
     public Button cannonButton;
     public Button crystalButton;
 
-    [SerializeField] private WaveManager waveManager;
     [SerializeField] private TowerPlaceManager towerManager;
     [SerializeField] private GameObject waveButton;
     [SerializeField] private GameObject gameOverUI;

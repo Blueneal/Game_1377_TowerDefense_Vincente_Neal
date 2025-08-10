@@ -31,9 +31,11 @@ public class WaveManager : MonoBehaviour
 
     public List<WaveData> LevelWaveData;
     public int enemiesInLevel = 0;
+    public int maxWaves;
 
     private void Start()
     {
+        maxWaves = LevelWaveData.Count;
         waveText.text = "Wave: " + currentWave + "/" + LevelWaveData.Count;
     }
 
@@ -41,12 +43,12 @@ public class WaveManager : MonoBehaviour
     {
         waveText.text = "Wave: " + currentWave + "/" + LevelWaveData.Count;
 
-        if (currentWave == 4)
+        if (currentWave > maxWaves)
         {
-            currentWave = 3;
+            currentWave = maxWaves;
         }
 
-        if (waveNumber == 3)
+        if (waveNumber == maxWaves && enemiesInLevel == 0)
         {
             gameManager.LevelComplete();
         }
@@ -64,6 +66,7 @@ public class WaveManager : MonoBehaviour
             yield return new WaitForSeconds(currentEnemyToSpawn.timeBeforeSpawn);
             SpawnEnemy(currentEnemyToSpawn.EnemyToSpawn, currentEnemyToSpawn.SpawnPoint, currentEnemyToSpawn.EndPoint);
         }
+        //yield return new WaitForSeconds(5);
         waveNumber++;
         currentWave++;
         gameManager.EndWave();
