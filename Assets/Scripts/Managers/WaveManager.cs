@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System;
 using TMPro;
+using Unity.VisualScripting;
 
 [System.Serializable]
 public struct SpawnData
@@ -29,6 +30,7 @@ public class WaveManager : MonoBehaviour
     private int currentWave = 1;
 
     public List<WaveData> LevelWaveData;
+    public int enemiesInLevel = 0;
 
     private void Start()
     {
@@ -38,6 +40,16 @@ public class WaveManager : MonoBehaviour
     private void Update()
     {
         waveText.text = "Wave: " + currentWave + "/" + LevelWaveData.Count;
+
+        if (currentWave == 4)
+        {
+            currentWave = 3;
+        }
+
+        if (waveNumber == 3)
+        {
+            gameManager.LevelComplete();
+        }
     }
 
     public void StartLevel()
@@ -62,5 +74,6 @@ public class WaveManager : MonoBehaviour
         GameObject enemyInstance = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
         Enemy enemy = enemyInstance.GetComponent<Enemy>();
         enemy.Initialize(endPoint);
+        enemiesInLevel++;
     }
 }

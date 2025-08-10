@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 {
     private NavMeshAgent agent;
     private Animator animator;
+    [SerializeField] private WaveManager waveManager;
     [SerializeField] private Transform endPoint;
     [SerializeField] private string isWalkingBool;
     [SerializeField] private int damage;
@@ -44,6 +45,7 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
             TowerPlaceManager towerManager = FindAnyObjectByType<TowerPlaceManager>();
             towerManager.AddMoney(value);
+            waveManager.enemiesInLevel--;
         }
     }
 
@@ -60,6 +62,7 @@ public class Enemy : MonoBehaviour
         animator.SetBool(isWalkingBool, false);
         GameManager.Instance.playerHealth.TakeDamage(damage);
         Destroy(gameObject);
+        waveManager.enemiesInLevel--;
     }
 
     public void TakeDamage(int damage)
