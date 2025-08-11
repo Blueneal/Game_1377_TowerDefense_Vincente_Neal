@@ -64,13 +64,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b13e738085bdeec48bae197208eb2471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 2
+  nextScene: 3
   playerHealth: {fileID: 149186628199554579}
+  waveManager: {fileID: 923615647513747974}
+  towerManager: {fileID: 6511470079860534810}
   ballistaButton: {fileID: 0}
   cannonButton: {fileID: 0}
   crystalButton: {fileID: 0}
-  waveManager: {fileID: 923615647513747974}
-  towerManager: {fileID: 6511470079860534810}
   waveButton: {fileID: 0}
   gameOverUI: {fileID: 0}
   levelCompleteUI: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
       timeBeforeSpawn: 1
       SpawnPoint: {fileID: 0}
       EndPoint: {fileID: 0}
-    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+    - EnemyToSpawn: {fileID: 2639826520325784389, guid: 0740c119f60947b459f3a8285d03439b, type: 3}
       timeBeforeSpawn: 1
       SpawnPoint: {fileID: 0}
       EndPoint: {fileID: 0}
@@ -129,7 +129,7 @@ MonoBehaviour:
       timeBeforeSpawn: 1
       SpawnPoint: {fileID: 0}
       EndPoint: {fileID: 0}
-    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+    - EnemyToSpawn: {fileID: 2639826520325784389, guid: 0740c119f60947b459f3a8285d03439b, type: 3}
       timeBeforeSpawn: 1
       SpawnPoint: {fileID: 0}
       EndPoint: {fileID: 0}
@@ -137,7 +137,7 @@ MonoBehaviour:
       timeBeforeSpawn: 1
       SpawnPoint: {fileID: 0}
       EndPoint: {fileID: 0}
-    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+    - EnemyToSpawn: {fileID: 2639826520325784389, guid: 0740c119f60947b459f3a8285d03439b, type: 3}
       timeBeforeSpawn: 1
       SpawnPoint: {fileID: 0}
       EndPoint: {fileID: 0}
@@ -147,7 +147,7 @@ MonoBehaviour:
       timeBeforeSpawn: 1
       SpawnPoint: {fileID: 0}
       EndPoint: {fileID: 0}
-    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+    - EnemyToSpawn: {fileID: 2639826520325784389, guid: 0740c119f60947b459f3a8285d03439b, type: 3}
       timeBeforeSpawn: 1
       SpawnPoint: {fileID: 0}
       EndPoint: {fileID: 0}
@@ -155,7 +155,7 @@ MonoBehaviour:
       timeBeforeSpawn: 1
       SpawnPoint: {fileID: 0}
       EndPoint: {fileID: 0}
-    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+    - EnemyToSpawn: {fileID: 2639826520325784389, guid: 0740c119f60947b459f3a8285d03439b, type: 3}
       timeBeforeSpawn: 1
       SpawnPoint: {fileID: 0}
       EndPoint: {fileID: 0}
@@ -163,10 +163,12 @@ MonoBehaviour:
       timeBeforeSpawn: 1
       SpawnPoint: {fileID: 0}
       EndPoint: {fileID: 0}
-    - EnemyToSpawn: {fileID: 8658937250692046400, guid: 5664fd8190fd2e046b090d332226937c, type: 3}
+    - EnemyToSpawn: {fileID: 2639826520325784389, guid: 0740c119f60947b459f3a8285d03439b, type: 3}
       timeBeforeSpawn: 1
       SpawnPoint: {fileID: 0}
       EndPoint: {fileID: 0}
+  enemiesInLevel: 0
+  maxWaves: 0
 --- !u!114 &6511470079860534810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c2de0dd31442e04097364c0cbf3ee8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingMoney: 30
+  startingMoney: 60
   currentMoney: 0
   mainCamera: {fileID: 0}
   tileLayer:

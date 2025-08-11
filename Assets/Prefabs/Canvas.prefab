@@ -2073,7 +2073,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 43c259f797f86814ea25ae862b2f9690, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65a56fcaa944a274fb64cb51c3aea058, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2122,7 +2122,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2499708056825357999}
   m_OnClick:
     m_PersistentCalls:
@@ -2132,7 +2132,7 @@ MonoBehaviour:
         m_MethodName: StartPlacingTower
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3319524773125385342, guid: c3fce67667dcae84fab62d77ee76e4ae, type: 3}
+          m_ObjectArgument: {fileID: 1436460061130039478, guid: 7c2fd535b96dbe946975924276b86fb8, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3013,7 +3013,7 @@ MonoBehaviour:
         m_MethodName: StartPlacingTower
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3319524773125385342, guid: c3fce67667dcae84fab62d77ee76e4ae, type: 3}
+          m_ObjectArgument: {fileID: 4706667535965574766, guid: c67a93b7502497f4ea0e3ec260c84e13, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -4644,7 +4644,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4908318468183686837
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4908,9 +4908,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Locked
-
-'
+  m_text: $20
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5598,8 +5596,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: StartGame
+        m_TargetAssemblyTypeName: WaveManager, Assembly-CSharp
+        m_MethodName: StartLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
