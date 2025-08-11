@@ -66,7 +66,7 @@ public class WaveManager : MonoBehaviour
             yield return new WaitForSeconds(currentEnemyToSpawn.timeBeforeSpawn);
             SpawnEnemy(currentEnemyToSpawn.EnemyToSpawn, currentEnemyToSpawn.SpawnPoint, currentEnemyToSpawn.EndPoint);
         }
-        //yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         waveNumber++;
         currentWave++;
         gameManager.EndWave();

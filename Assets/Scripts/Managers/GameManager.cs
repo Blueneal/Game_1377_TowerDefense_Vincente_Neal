@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
             if (towerManager.currentMoney >= 20 && nextScene == 3)
             {
                 cannonButton.interactable = true;
-                if (towerManager.currentMoney >= 30 && nextScene == 4)
+                if (towerManager.currentMoney >= 50 && nextScene == 4)
                 {
                     crystalButton.interactable = true;
                 }

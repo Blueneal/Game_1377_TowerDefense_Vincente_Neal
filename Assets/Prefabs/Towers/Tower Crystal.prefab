@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireCoolDown: 1
-  value: 60
+  value: 50
   projectilePrefab: {fileID: 8790752205422798414, guid: 9461fc0dc51d3cb469652d1b6b090b87, type: 3}
 --- !u!135 &6983228495448426743
 SphereCollider:
