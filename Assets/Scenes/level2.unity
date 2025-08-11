@@ -2350,13 +2350,13 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: ca5b3fb3a8808734e957590b409c3960, type: 3}
 --- !u!114 &591019834 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 923615647513747974, guid: ca5b3fb3a8808734e957590b409c3960, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7926589338319774129, guid: ca5b3fb3a8808734e957590b409c3960, type: 3}
   m_PrefabInstance: {fileID: 591019833}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7fb4e49d24690341b4b1e805816a30f, type: 3}
+  m_Script: {fileID: 11500000, guid: b13e738085bdeec48bae197208eb2471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &591019835 stripped
@@ -2692,6 +2692,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 591019834}
+    - target: {fileID: 1422176726617229435, guid: e6b58098d8dc3a74ea84df99643f7a2c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1422176726617229435, guid: e6b58098d8dc3a74ea84df99643f7a2c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2264132303670502835, guid: e6b58098d8dc3a74ea84df99643f7a2c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

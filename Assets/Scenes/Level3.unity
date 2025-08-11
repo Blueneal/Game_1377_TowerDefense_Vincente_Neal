@@ -2071,7 +2071,7 @@ PrefabInstance:
       objectReference: {fileID: 1253654256}
     - target: {fileID: 6511470079860534810, guid: ca5b3fb3a8808734e957590b409c3960, type: 3}
       propertyPath: startingMoney
-      value: 80
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7926589338319774129, guid: ca5b3fb3a8808734e957590b409c3960, type: 3}
       propertyPath: gameOverUI
