@@ -53,6 +53,10 @@ PrefabInstance:
       value: Tower Cannon
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 96c8b911e0a18cc4b99f479574e1aabd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96c8b911e0a18cc4b99f479574e1aabd, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -167,6 +171,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4128705d76b35db498f2ee94a411ed38, type: 3}
       propertyPath: m_Name
       value: Cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4128705d76b35db498f2ee94a411ed38, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598419493678936200, guid: 4128705d76b35db498f2ee94a411ed38, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

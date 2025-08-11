@@ -2,15 +2,23 @@ using UnityEngine;
 
 public class UpgradeTower : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject upgradeIndicator;
+    private Tower tower;
+    private int currentMoney;
 
-    // Update is called once per frame
-    void Update()
+    public int upgradeCost;
+
+    private void Awake()
     {
-        
+        currentMoney = GameManager.Instance.towerManager.currentMoney;
+        tower = gameObject.GetComponent<Tower>();
+        upgradeCost = tower.value * 2;
+    }
+    private void Update()
+    {
+        if (currentMoney >= upgradeCost)
+        {
+            upgradeIndicator.SetActive(true);
+        }
     }
 }
