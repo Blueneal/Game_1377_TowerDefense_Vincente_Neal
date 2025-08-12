@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        Time.timeScale = 1f;
         waveManager.StartLevel();
         waveButton.SetActive(false);
         ballistaButton.interactable = false;
