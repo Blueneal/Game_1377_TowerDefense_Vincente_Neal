@@ -21,6 +21,10 @@ public class Enemy : MonoBehaviour
         currentHealth = maxHealth;
     }
 
+    /// <summary>
+    /// Checks to see if the enemy has the tag of horse, and sets the animator in the child
+    /// Sets the animator for enemies
+    /// </summary>
     void Start()
     {
         if (gameObject.CompareTag("Horse"))
@@ -31,12 +35,19 @@ public class Enemy : MonoBehaviour
         animator.SetBool(isWalkingBool, true);
     }
 
+    /// <summary>
+    /// Sets the destination of the enemy by what endpoint was set in WaveManager and the editor
+    /// </summary>
+    /// <param name="inputEndPoint"></param>
     public void Initialize(Transform inputEndPoint)
     {
         endPoint = inputEndPoint;
         agent.SetDestination(endPoint.position);
     }
 
+    /// <summary>
+    /// checks to see if the enemy is at 0 health and removes the game object, and adds the value of the enemy to the players current money
+    /// </summary>
     void Update()
     {
         if (currentHealth <= 0)
@@ -48,6 +59,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Deals damage to the player when the enemy enters the end point
+    /// </summary>
+    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("End"))
@@ -56,6 +71,9 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Deals the set amount of damage that the enemy is assigned in the editor
+    /// </summary>
     private void DealDamage()
     {
         animator.SetBool(isWalkingBool, false);
@@ -64,6 +82,10 @@ public class Enemy : MonoBehaviour
         GameManager.Instance.waveManager.enemiesInLevel--;
     }
 
+    /// <summary>
+    /// Removes from the enemy health based off the damage value from the projectile
+    /// </summary>
+    /// <param name="damage"></param>
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;

@@ -23,6 +23,10 @@ public class TowerPlaceManager : MonoBehaviour
         moneyText.text = "Money: $" + currentMoney;
     }
     
+    /// <summary>
+    /// Checks to see if the player has enough money, and if so sets the correct button to on
+    /// Checks to see if the player is placing a tower, and updates the preview of the tower being placed to where the mouse is on screen
+    /// </summary>
     void Update()
     {
         moneyText.text = "Money: $" + currentMoney;
@@ -42,7 +46,7 @@ public class TowerPlaceManager : MonoBehaviour
             }
         }
 
-        if (currentMoney < 30)
+        if (currentMoney < 50)
         {
             GameManager gameManager = GameManager.Instance;
             gameManager.crystalButton.interactable = false;
@@ -69,6 +73,10 @@ public class TowerPlaceManager : MonoBehaviour
         placeTowerAction.Disable();
     }
 
+    /// <summary>
+    /// Instantiates a preview of the selected tower when the player selects any tower
+    /// </summary>
+    /// <param name="towerPrefab"></param>
     public void StartPlacingTower(GameObject towerPrefab)
     {
         if (currentTowerToSpawn != towerPrefab)
@@ -84,6 +92,10 @@ public class TowerPlaceManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Places the tower on to the grid where the player clicks on screen, if in a valid space
+    /// </summary>
+    /// <param name="context"></param>
     private void OnPlaceTower(InputAction.CallbackContext context)
     {
         if (!isPlacingTower)
@@ -96,6 +108,10 @@ public class TowerPlaceManager : MonoBehaviour
         isPlacingTower = false;
     }
 
+    /// <summary>
+    /// Adds money to the players pool for buying towers
+    /// </summary>
+    /// <param name="money"></param>
     public void AddMoney(int money)
     {
         currentMoney += money;

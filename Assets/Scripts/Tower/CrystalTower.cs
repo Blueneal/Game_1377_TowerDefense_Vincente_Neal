@@ -5,6 +5,10 @@ public class CrystalTower : Tower
 {
     [SerializeField] private GameObject projectilePrefab;
 
+    /// <summary>
+    /// Fires the crystal projectile at the set enemy
+    /// </summary>
+    /// <param name="Target"></param>
     protected override void FireAt(Enemy Target)
     {
         if (projectilePrefab != null)
@@ -14,6 +18,10 @@ public class CrystalTower : Tower
         }
     }
 
+    /// <summary>
+    /// First looks for the closest enemy in the list, and then sees if the enemy is nto already slowed
+    /// </summary>
+    /// <returns></returns>
     protected override Enemy GetClosestEnemy()
     {
         for (int i = enemiesInRange.Count - 1; i >= 0; i--)

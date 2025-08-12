@@ -15,6 +15,9 @@ public class Health : MonoBehaviour
         healthSlider.value = currentHealth;
     }
 
+    /// <summary>
+    /// Deletes the enemy object when health reaches 0
+    /// </summary>
     public void Update()
     {
         if (currentHealth <= 0)
@@ -23,11 +26,10 @@ public class Health : MonoBehaviour
         }
     }
 
-    public bool IsDead()
-    {
-        return currentHealth > 0;
-    }
-
+    /// <summary>
+    /// Deals damage to the current health based off of the amount of damage by the enemy
+    /// </summary>
+    /// <param name="damageAmount"></param>
     public void TakeDamage(int damageAmount)
     {
         if (currentHealth > 0)

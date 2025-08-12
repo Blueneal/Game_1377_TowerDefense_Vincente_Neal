@@ -4,6 +4,10 @@ public class CannonballProjectile : Projectile
 {
     [SerializeField] private float knockBackForce = 5f;
     
+    /// <summary>
+    /// When the projectile hits the enemy it adds force to the object pushing it back
+    /// </summary>
+    /// <param name="other"></param>
     protected override void OnTriggerEnter(Collider other)
     {
         if (other.transform == target)

@@ -6,6 +6,9 @@ using System;
 using TMPro;
 using Unity.VisualScripting;
 
+/// <summary>
+/// Creates a universal structure of the spawn data needed for enemies
+/// </summary>
 [System.Serializable]
 public struct SpawnData
 {
@@ -15,6 +18,9 @@ public struct SpawnData
     public Transform EndPoint;
 }
 
+/// <summary>
+/// Creates a universal structure of the needed data for waves
+/// </summary>
 [System.Serializable]
 public struct WaveData
 {
@@ -39,6 +45,9 @@ public class WaveManager : MonoBehaviour
         waveText.text = "Wave: " + currentWave + "/" + LevelWaveData.Count;
     }
 
+    /// <summary>
+    /// Checks to make sure that all enemies are off the screen before callling LevelComplete in GameManager
+    /// </summary>
     private void Update()
     {
         waveText.text = "Wave: " + currentWave + "/" + LevelWaveData.Count;
@@ -54,11 +63,18 @@ public class WaveManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Starts the coroutine for spawning enemies
+    /// </summary>
     public void StartLevel()
     {
         StartCoroutine(StartWave());
     }
 
+    /// <summary>
+    /// spawns every enemy in every individual wave before stopping, pausing and then continuing when the player clicks to start the next wave
+    /// </summary>
+    /// <returns></returns>
     IEnumerator StartWave()
     {
         foreach (SpawnData currentEnemyToSpawn in LevelWaveData[waveNumber].enemyData)
@@ -72,6 +88,12 @@ public class WaveManager : MonoBehaviour
         gameManager.EndWave();
     }
 
+    /// <summary>
+    /// Spawns the enemy with the needed information set in the enemy structure
+    /// </summary>
+    /// <param name="enemyPrefab"></param>
+    /// <param name="spawnPoint"></param>
+    /// <param name="endPoint"></param>
     public void SpawnEnemy(GameObject enemyPrefab, Transform spawnPoint, Transform endPoint)
     {
         GameObject enemyInstance = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);

@@ -4,6 +4,10 @@ public class BallistaTower : Tower
 {
     [SerializeField] private GameObject projectilePrefab;
 
+    /// <summary>
+    /// Fires arrow projectile at the first enemy in the list
+    /// </summary>
+    /// <param name="Target"></param>
     protected override void FireAt(Enemy Target)
     {
         if (projectilePrefab != null)
@@ -13,6 +17,10 @@ public class BallistaTower : Tower
         }
     }
 
+    /// <summary>
+    /// Finds the closest enemy in the list of enemies and sets that as the towers target
+    /// </summary>
+    /// <returns></returns>
     protected override Enemy GetClosestEnemy()
     {
         for (int i = enemiesInRange.Count - 1; i >= 0; i--)

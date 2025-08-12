@@ -14,6 +14,10 @@ public class UpgradeTower : MonoBehaviour
         tower = gameObject.GetComponent<Tower>();
         upgradeCost = tower.value * 2;
     }
+
+    /// <summary>
+    /// Turns on the upgrade indicator when the player has enough money
+    /// </summary>
     private void Update()
     {
         if (currentMoney >= upgradeCost)
