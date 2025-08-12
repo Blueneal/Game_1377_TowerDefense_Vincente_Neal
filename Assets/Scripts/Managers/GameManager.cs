@@ -1,5 +1,4 @@
 using System;
-using UnityEditor.Rendering.Universal.ShaderGUI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -61,11 +60,13 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void NextLevel()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(nextScene);
     }
 
